@@ -1,0 +1,19 @@
+﻿<Window x:Class="GestaoProdutos.UI.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestaoProdutos.UI.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Ferramentas&#xD;&#xA;" Height="63" VerticalAlignment="Top">
+            <Button Content="Abrir Estoque" HorizontalAlignment="Left" Height="21" Margin="665,0,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click"/>
+        </GroupBox>
+        <GroupBox Header="Dashboard&#xD;&#xA;" Height="371" VerticalAlignment="Top" Margin="0,63,0,0"/>
+
+    </Grid>
+</Window>

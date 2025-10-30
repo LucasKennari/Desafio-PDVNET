@@ -1,0 +1,24 @@
+﻿<Window x:Class="GestaoProdutos.UI.Views.ProdutoFormView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestaoProdutos.UI.Views"
+        mc:Ignorable="d"
+        Title="ProdutoFormView" Height="450" Width="800">
+
+    <Grid>
+        <GroupBox x:Name="grpProdutos" Header="'&#xD;&#xA;" Height="63" VerticalAlignment="Top">
+            <Button x:Name="btnCarregar" Content="Carregar" Margin="649,0,0,0" Width="118" Command="{Binding CarregarProdutoCommand}" Click="btnCarregar_Click" RenderTransformOrigin="0.573,0.752" HorizontalAlignment="Left"/>
+        </GroupBox>
+        <DataGrid AutoGenerateColumns="false" CanUserAddRows="false" IsReadOnly="True" ColumnWidth="*"  IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Produtos}"  Margin="5,63,5,5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"  />
+                <DataGridTextColumn Header="Preço" Binding="{Binding Preco, ConverterCulture=pt-BR, StringFormat=C}" />
+                <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
