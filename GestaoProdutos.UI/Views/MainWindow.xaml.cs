@@ -29,12 +29,8 @@ namespace GestaoProdutos.UI.Views
         {
             InitializeComponent();
             _serviceProvider = serviceProvider;
+            DataContext = _serviceProvider.GetRequiredService<ViewModels.MainViewModel>();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var estoqueView = _serviceProvider.GetRequiredService<ProdutoFormView>();
-            estoqueView.ShowDialog();
-        }
+ 
     }
 }

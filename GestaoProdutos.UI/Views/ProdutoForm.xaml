@@ -5,20 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestaoProdutos.UI.Views"
         mc:Ignorable="d"
-        Title="ProdutoFormView" Height="450" Width="800">
+        Title="ProdutoFormView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
 
     <Grid>
-        <GroupBox x:Name="grpProdutos" Header="'&#xD;&#xA;" Height="63" VerticalAlignment="Top">
-            <Button x:Name="btnCarregar" Content="Carregar" Margin="649,0,0,0" Width="118" Command="{Binding CarregarProdutoCommand}" Click="btnCarregar_Click" RenderTransformOrigin="0.573,0.752" HorizontalAlignment="Left"/>
+        <GroupBox x:Name="grpProdutos" Height="63" VerticalAlignment="Top">
+            <Grid Height="58">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="119*"/>
+                    <ColumnDefinition Width="275*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnAddProduto" 
+                        Content="Adicionar" 
+                        Margin="422,17,10,17" 
+                        Width="118" 
+                        Height="24" 
+                        Command="{Binding AdicionarProdutoFromCommand}" Grid.Column="1" HorizontalAlignment="Right"
+                        />
+
+                <Button x:Name="btnCarregar" 
+                        Content="Carregar" 
+                        Command="{Binding CarregarProdutoCommand}" 
+                        Width="118" 
+                        Height="24" Margin="292,17,140,17" Grid.Column="1" HorizontalAlignment="Right"
+                        />
+            </Grid>
+
         </GroupBox>
-        <DataGrid AutoGenerateColumns="false" CanUserAddRows="false" IsReadOnly="True" ColumnWidth="*"  IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Produtos}"  Margin="5,63,5,5">
+        
+        <DataGrid SelectedItem="{Binding ProdutoSelecionado, Mode=TwoWay}" AutoGenerateColumns="false" CanUserAddRows="false" IsReadOnly="True" ColumnWidth="*"  IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Produtos}"   Margin="5,63,5,5">
+           
+            <DataGrid.ContextMenu>
+            <ContextMenu Name="ContextMenuGrid">
+                    <MenuItem Header="Editar" Command="{Binding EditarProdutoFromCommand}"></MenuItem>
+                    <MenuItem Header="Excluir" Command="{Binding ExcluirProdutoFromCommand}"></MenuItem>
+            </ContextMenu>
+            </DataGrid.ContextMenu>
+            
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="30" />
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"  />
-                <DataGridTextColumn Header="Preço" Binding="{Binding Preco, ConverterCulture=pt-BR, StringFormat=C}" />
                 <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+                <DataGridTextColumn Header="Preço" Binding="{Binding Preco, ConverterCulture=pt-BR, StringFormat=C}" />
             </DataGrid.Columns>
+            
         </DataGrid>
     </Grid>
 </Window>

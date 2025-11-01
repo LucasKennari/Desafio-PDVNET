@@ -13,12 +13,18 @@
     <Compile Update="Views\ProdutoForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ProdutoFormAdd.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ProdutoForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ProdutoFormAdd.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

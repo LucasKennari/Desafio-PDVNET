@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Design;
 namespace GestaoProdutos.Data.ProdutoRepository
 {
-    public class ProdutoRepository
+    public class ProdutoRepository : IProdutoRepository
     {
         private readonly ProdutoContext _produtoContext;
         public ProdutoRepository(ProdutoContext produtoContext)
@@ -26,16 +26,36 @@ namespace GestaoProdutos.Data.ProdutoRepository
             var produto = _produtoContext.Produtos.Find(idProduto);
             if (produto != null)
             {
-                _produtoContext.Remove(idProduto);
-                _produtoContext.SaveChanges();
+                _produtoContext.Remove(produto);
                 return _produtoContext.SaveChanges();
             }
             return 0;
         }
         public int Atualizar(Produto produto)
+        {//refact
+            if (produto.Id == null)
+            {
+                return -1;
+            }
+            var produtoresult = _produtoContext.Produtos.Find(produto.Id);
+            if (produto != null)
+            {
+                produtoresult.Nome = produto.Nome;
+                produtoresult.Descricao = produto.Descricao;
+                produtoresult.Preco = produto.Preco;
+                produtoresult.Quantidade = produto.Quantidade;
+
+                return _produtoContext.SaveChanges();
+            }
+            return 0;
+        }
+        public int BuscarPorId(int idProduto)
         {
-            _produtoContext.Update(produto);
-            return _produtoContext.SaveChanges();
+            var produto = _produtoContext.Produtos.Find(idProduto);
+            if (produto == null)
+                return -1;
+
+            return produto.Id;
         }
     }
 }

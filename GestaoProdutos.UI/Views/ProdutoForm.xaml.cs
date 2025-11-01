@@ -1,4 +1,5 @@
 ﻿using GestaoProdutos.UI.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,15 +21,21 @@ namespace GestaoProdutos.UI.Views
     /// </summary>
     public partial class ProdutoFormView : Window
     {
+        private readonly IServiceProvider _serviceProvider;
+
         public ProdutoFormView(ProdutoFormViewModel viewModel)
         {
             InitializeComponent();
             DataContext = viewModel;
-        }
+            this.AddHandler(FrameworkElement.ContextMenuOpeningEvent, new ContextMenuEventHandler(OnContextMenuOpening));
 
-        private void btnCarregar_Click(object sender, RoutedEventArgs e)
+        }
+        private void OnContextMenuOpening(object sender, ContextMenuEventArgs e)
         {
-         
+            if (e.Source is FrameworkElement fe && fe.ContextMenu != null)
+            {
+                fe.ContextMenu.DataContext = fe.DataContext;
+            }
         }
     }
 }

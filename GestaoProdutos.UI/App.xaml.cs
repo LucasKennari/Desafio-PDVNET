@@ -1,13 +1,12 @@
 ﻿using GestaoProdutos.Business.ProdutoService;
 using GestaoProdutos.Data;
 using GestaoProdutos.Data.ProdutoRepository;
+using GestaoProdutos.UI.Services;
+using GestaoProdutos.UI.ViewModels;
 using GestaoProdutos.UI.Views;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Configuration;
-using System.Data;
 using System.IO;
 using System.Windows;
 namespace GestaoProdutos.UI
@@ -36,12 +35,17 @@ namespace GestaoProdutos.UI
 
       
             services.AddSingleton<MainWindow>();
-            services.AddScoped<ProdutoRepository>();
-            services.AddScoped<ProdutoService>();
 
-            services.AddTransient<ViewModels.ProdutoFormViewModel>();
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<IProdutoService, ProdutoService>();
+
+            services.AddTransient<ProdutoFormViewModel>();
+            services.AddTransient<ProdutoFormAddViewModel>();
+
+            services.AddSingleton<MainViewModel>();
+            services.AddTransient<ProdutoFormAdd>();
             services.AddTransient<ProdutoFormView>();
-            services.AddSingleton<ViewModels.MainViewModel>();
+            services.AddSingleton<INavigationService, NavigationService>();
 
             _serviceProvider = services.BuildServiceProvider();
         }
