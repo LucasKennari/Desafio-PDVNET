@@ -22,7 +22,7 @@
 
 > [!NOTE] 
 > ###  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white" height="25" margin="0" align="center"/> Documentação do Projeto: 
-> Na [PROJ-DOCS](./Projeto-DOCS.Readme) você encontrará toda a documentação referente a arquitetura disponivel.
+> Na [PROJ-DOCS](./Projeto-DOCS.md) você encontrará toda a documentação referente a arquitetura disponivel.
 
 
 #### Agradecimentos:
