@@ -15,6 +15,7 @@
 <details>
     <summary> GestaoProdutos.UI</summary>
  <img src="https://i.imgur.com/CnoMjPg.png">
+ 
   - Principais pontos:
   - - Views: Camada de design
   - - Views Models: Camada de manipulação do design
@@ -26,6 +27,7 @@
 <details>
     <summary> GestaoProdutos.Data</summary>
  <img src="https://i.imgur.com/w1bzVA1.png">
+ 
   - Principais pontos:
   - - Model: Camada da estrutura da tabela do banco.
   - - Repository: Camada de gerenciamento do banco de dados, como consulta, editar, adicionar, excluir
