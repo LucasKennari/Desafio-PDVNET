@@ -1,30 +1,34 @@
-# Sistema de Gestão de Estoque
->Essa rotina tem como objetivo gerenciar os produtos no estoque, suas funcionalidades:
- - Cadastrar um novo Produto;
- - Editar um produto;
- - Deletar um produto;
->Informações disponiveis:
-  - Todos os produtos;
-  - Produtos em baixa de estoque;
-  - Total de produtos, todos os produtos juntos pela quantidade;
-  - Preço total de todos os produtos por Qtd * Preço;
+# Arquitetura
+ - Foi Utilizado o padrão **MVVMM**
+## Estrutura do projeto
+ <img src="https://image.prntscr.com/image/9jFIlo2dQNKmcZN5-t5byg.png">
+ 
+> - **Business:** Camada de regra de negocio, onde fica a services e suas validações.
+   
+> - **Data:** Se encontra a conexão do banco de dados, a entitidade/model, e o repositorio que faz o CRUD.
+ 
+> - **Tests:** Camada de testes simples (Model e Service)
 
-## Arquitetura
-  - Padrão de Arquitetura **MVVM**.
-  - Banco de dados utilizado: **SQL SERVER - MIGRATIONS**
-  - Tecnologias utilizadas: **C#, WPF, ENTITY FRAMEWORK, MVVMLightLibs**
-
-## Como executar esse projeto:
-> [!IMPORTANT]
-> **Opção 1**:
-> **Opção 2**:
-> > ###  <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" height="25" margin="0" align="center"/>
-
-> [!NOTE] 
-> ###  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white" height="25" margin="0" align="center"/> Documentação do Projeto: 
-> Na [PROJ-DOCS](./Projeto-DOCS.Readme) você encontrará toda a documentação referente a arquitetura disponivel.
+> - **UI**: Onde fica as Views, views models, lógicas de manipulação de dados e componentes relacionado a views.
 
 
-#### Agradecimentos:
-*Agradeço pela oportunidade de poder participar dessa etapa, pude aprender bastante coisa sobre MVVM e WPF.*
+<details>
+    <summary> GestaoProdutos.UI</summary>
+ <img src="https://i.imgur.com/CnoMjPg.png">
+  - Principais pontos:
+  - - Views: Camada de design
+  - - Views Models: Camada de manipulação do design
+  - - Services: Gestão de navegação entre as telas
+  - - Converters: Lógica de conversões relacionado a valores e realizar determinada situação
+  - - Command: Seria todas as ações realizadas. (Por exemplo um Adicionar Produto estaria dentro da pasta command).
+</details>
 
+<details>
+    <summary> GestaoProdutos.Data</summary>
+ <img src="https://i.imgur.com/w1bzVA1.png">
+  - Principais pontos:
+  - - Model: Camada da estrutura da tabela do banco.
+  - - Repository: Camada de gerenciamento do banco de dados, como consulta, editar, adicionar, excluir
+  - - Context: Conexão com banco, criação da tabela e de seeds.
+ 
+</details>
