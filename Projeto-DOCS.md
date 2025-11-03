@@ -32,5 +32,13 @@
   - - Model: Camada da estrutura da tabela do banco.
   - - Repository: Camada de gerenciamento do banco de dados, como consulta, editar, adicionar, excluir
   - - Context: Conexão com banco, criação da tabela e de seeds.
+</details>
+
+
+<details>
+    <summary> GestaoProdutos.Business</summary>
+ <img src="https://i.imgur.com/UPgGoax.png">
  
+  - Principais pontos:
+  - - Service: Camada de regra de negocio, validações e gerenciamento de dados para o banco.
 </details>
