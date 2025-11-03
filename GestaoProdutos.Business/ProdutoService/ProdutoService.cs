@@ -26,16 +26,9 @@ namespace GestaoProdutos.Business.ProdutoService
         public decimal ValorTotalEstoque() => _produtoRepository.GetAll().Select(x => x.Preco * x.Quantidade).Sum();
         public (int resultado, string mensagem) AddProduto(Produto produto)
         {
-            if (produto.Preco <= 0)
-            {
-                throw new Exception("Não é possível adicionar produto sem preço");
-
-            }
-            if (produto.Quantidade <= 0)
-            {
-                throw new Exception("Não é possível adicionar produto sem quantidade");
-            }
-
+           var (resultadoValidacao, mensagemValidacao) = produto.ValidarCampos(produto);
+            if (!resultadoValidacao)
+                return (0, mensagemValidacao);
             var resultado = _produtoRepository.AddProduto(produto);
             return (resultado, "Adicionado com sucesso");
         }

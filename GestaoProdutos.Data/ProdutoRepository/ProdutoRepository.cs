@@ -33,14 +33,14 @@ namespace GestaoProdutos.Data.ProdutoRepository
         }
         public int Atualizar(Produto produto)
         {//refact
-            if (produto.Id == null)
+            if (produto?.Id == null)
             {
                 return -1;
             }
             var produtoresult = _produtoContext.Produtos.Find(produto.Id);
             if (produto != null)
             {
-                produtoresult.Nome = produto.Nome;
+                produtoresult.Nome = produto?.Nome;
                 produtoresult.Descricao = produto.Descricao;
                 produtoresult.Preco = produto.Preco;
                 produtoresult.Quantidade = produto.Quantidade;

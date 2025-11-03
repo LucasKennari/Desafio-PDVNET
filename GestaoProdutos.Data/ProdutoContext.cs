@@ -46,7 +46,7 @@ namespace GestaoProdutos.Data
                       .HasDefaultValueSql("GETDATE()");
 
                 entity.Property(p => p.Categoria).HasColumnType("INT");
-                     
+
             });
 
 
@@ -57,13 +57,13 @@ namespace GestaoProdutos.Data
             return new List<Produto>
     {
       new Produto {Id = 3, Nome = "Laptop", Preco = 20.5m, Quantidade = 10,
- Descricao ="O melhor laptop para jogos"},
+            Descricao ="O melhor laptop para jogos"},
       new Produto {Id = 4, Nome = "Microsoft Office", Preco = 20.99m, Quantidade = 50,
- Descricao ="Aplicação Office"},
+            Descricao ="Aplicação Office"},
       new Produto {Id = 5, Nome = "Lazer Mouse", Preco = 12.02m, Quantidade = 20,
-Descricao ="Um mouse decente"},
+            Descricao ="Um mouse decente"},
       new Produto {Id = 6,  Nome = "USB Storage", Preco = 5.00m, Quantidade = 20,
-Descricao ="Armazena ate 256GB de dados"}
+            Descricao ="Armazena ate 256GB de dados"}
     };
         }
     }

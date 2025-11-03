@@ -3,20 +3,51 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\converters\\estoquebaixoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:converters\\estoquebaixoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\viewmodels\\produtoformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:viewmodels\\produtoformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\views\\produtoformadd.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:views\\produtoformadd.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\views\\produtoformadd.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:views\\produtoformadd.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{476B7FA3-D48A-4781-A6E5-4D98A4E6E080}|..\\GestaoProdutos.Business\\GestaoProdutos.Business.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.business\\responses\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{476B7FA3-D48A-4781-A6E5-4D98A4E6E080}|..\\GestaoProdutos.Business\\GestaoProdutos.Business.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.business\\responses\\ihandlerresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{476B7FA3-D48A-4781-A6E5-4D98A4E6E080}|..\\GestaoProdutos.Business\\GestaoProdutos.Business.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.business\\responses\\iresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E852C9E8-4896-4E9A-A5FE-DC0CAF11A311}|..\\GestaoProdutos.Data\\GestaoProdutos.Data.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.data\\produtocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E852C9E8-4896-4E9A-A5FE-DC0CAF11A311}|..\\GestaoProdutos.Data\\GestaoProdutos.Data.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.data\\produtocontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\command\\basecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:command\\basecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\converters\\estoquebaixoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:converters\\estoquebaixoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\views\\produtoform.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:views\\produtoform.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\views\\produtoform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:views\\produtoform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\viewmodels\\produtoformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|solutionrelative:viewmodels\\produtoformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A908F136-CAAC-418E-ABFD-550D8EA5997F}|GestaoProdutos.UI.csproj|c:\\users\\lucas\\desktop\\pdvnet\\gestaoprodutos.ui\\viewmodels\\produtoformaddviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,46 +73,124 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Business\\Responses\\Response.cs",
+              "RelativeDocumentMoniker": "..\\GestaoProdutos.Business\\Responses\\Response.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Business\\Responses\\Response.cs",
+              "RelativeToolTip": "..\\GestaoProdutos.Business\\Responses\\Response.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T15:18:01.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "iHandlerResult.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Business\\Responses\\iHandlerResult.cs",
+              "RelativeDocumentMoniker": "..\\GestaoProdutos.Business\\Responses\\iHandlerResult.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Business\\Responses\\iHandlerResult.cs",
+              "RelativeToolTip": "..\\GestaoProdutos.Business\\Responses\\iHandlerResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T15:17:59.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IResponse.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Business\\Responses\\IResponse.cs",
+              "RelativeDocumentMoniker": "..\\GestaoProdutos.Business\\Responses\\IResponse.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Business\\Responses\\IResponse.cs",
+              "RelativeToolTip": "..\\GestaoProdutos.Business\\Responses\\IResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T15:17:57.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProdutoContext.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Data\\ProdutoContext.cs",
+              "RelativeDocumentMoniker": "..\\GestaoProdutos.Data\\ProdutoContext.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Data\\ProdutoContext.cs",
+              "RelativeToolTip": "..\\GestaoProdutos.Data\\ProdutoContext.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T15:14:29.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProdutoContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Data\\ProdutoContextFactory.cs",
+              "RelativeDocumentMoniker": "..\\GestaoProdutos.Data\\ProdutoContextFactory.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.Data\\ProdutoContextFactory.cs",
+              "RelativeToolTip": "..\\GestaoProdutos.Data\\ProdutoContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T15:14:26.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseCommand.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Command\\BaseCommand.cs",
+              "RelativeDocumentMoniker": "Command\\BaseCommand.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Command\\BaseCommand.cs",
+              "RelativeToolTip": "Command\\BaseCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T15:08:38.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NavigationService.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Services\\NavigationService.cs",
+              "RelativeDocumentMoniker": "Services\\NavigationService.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Services\\NavigationService.cs",
+              "RelativeToolTip": "Services\\NavigationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T15:06:54.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProdutoFormAdd.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Views\\ProdutoFormAdd.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\ProdutoFormAdd.xaml.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Views\\ProdutoFormAdd.xaml.cs",
+              "RelativeToolTip": "Views\\ProdutoFormAdd.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIAwwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T14:53:40.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "EstoqueBaixoConverter.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Converters\\EstoqueBaixoConverter.cs",
               "RelativeDocumentMoniker": "Converters\\EstoqueBaixoConverter.cs",
               "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Converters\\EstoqueBaixoConverter.cs",
               "RelativeToolTip": "Converters\\EstoqueBaixoConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-03T14:10:25.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProdutoFormAddViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\ViewModels\\ProdutoFormAddViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ProdutoFormAddViewModel.cs",
-              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\ViewModels\\ProdutoFormAddViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ProdutoFormAddViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T13:56:34.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProdutoFormViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\ViewModels\\ProdutoFormViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ProdutoFormViewModel.cs",
-              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\ViewModels\\ProdutoFormViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ProdutoFormViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T13:54:57.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ProdutoFormAdd.xaml",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Views\\ProdutoFormAdd.xaml",
               "RelativeDocumentMoniker": "Views\\ProdutoFormAdd.xaml",
@@ -93,7 +202,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "ProdutoForm.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Views\\ProdutoForm.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\ProdutoForm.xaml.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Views\\ProdutoForm.xaml.cs",
+              "RelativeToolTip": "Views\\ProdutoForm.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T14:53:22.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProdutoFormAddViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\ViewModels\\ProdutoFormAddViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProdutoFormAddViewModel.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\ViewModels\\ProdutoFormAddViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ProdutoFormAddViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:56:34.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProdutoFormViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\ViewModels\\ProdutoFormViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProdutoFormViewModel.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\ViewModels\\ProdutoFormViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ProdutoFormViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:54:57.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ProdutoForm.xaml",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Views\\ProdutoForm.xaml",
               "RelativeDocumentMoniker": "Views\\ProdutoForm.xaml",
