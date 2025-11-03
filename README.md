@@ -12,16 +12,22 @@
 ## Arquitetura
   - Padrão de Arquitetura **MVVM**.
   - Banco de dados utilizado: **SQL SERVER - MIGRATIONS**
-  - Tecnologias utilizadas: **C#, WPF, ENTITY FRAMEWORK, MVVMLightLibs**
+  - Tecnologias utilizadas: **C#, WPF, ENTITY FRAMEWORK, MVVMLightLibs, Bogus**
 
 ## Como executar esse projeto:
 > [!IMPORTANT]
-> **Opção 1**:
-> **Opção 2**:
-> > ###  <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" height="25" margin="0" align="center"/>
+>  1. Crie um fork!
+>  2. Utilize o comando para clonar no seu PC: `git clone LINK_SSH/HTTPS`
+>     
+>  <img src="https://i.imgur.com/RgYeWeg.jpeg" height="25" margin="0" align="center"/> **Após ter baixado na sua máquina**
+>  1. Na solution GestaoProdutos.Data, abra o Console.
+>  2. Execute o comando  `dotnet ef migrations add inicial` (Para criar as migrations com seeds)
+>  3. E depois, execute o comando `dotnet ef database update` (Pois irá subir para o banco de dados)
+>  4. Após isso, Seleciona o Assembly **GestaoProdutos.UI** Como principal 
+>  5. E agora clique em buildar.
 
 > [!NOTE] 
-> ###  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white" height="25" margin="0" align="center"/> Documentação do Projeto: 
+> ### Documentação do Projeto: 
 > Na [PROJ-DOCS](./Projeto-DOCS.md) você encontrará toda a documentação referente a arquitetura disponivel.
 
 
