@@ -1,14 +1,23 @@
-﻿<Window x:Class="GestaoProdutos.UI.Views.ProdutoFormView"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestaoProdutos.UI.Views"
+        xmlns:Behaviors="clr-namespace:GestaoProdutos.UI.Behaviors" x:Class="GestaoProdutos.UI.Views.ProdutoFormView"
+        xmlns:converters="clr-namespace:GestaoProdutos.UI.Converters"
         mc:Ignorable="d"
-        Title="ProdutoFormView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="ProdutoFormView" Height="468" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <converters:EstoqueBaixoConverter x:Key="EstoqueBaixoConverter"/>
+    </Window.Resources>
 
-    <Grid>
-        <GroupBox x:Name="grpProdutos" Height="63" VerticalAlignment="Top">
+    <Grid Margin="0,0,0,49">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="457*"/>
+            <ColumnDefinition Width="343*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox x:Name="grpProdutos" Height="63" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <Grid Height="58">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="119*"/>
@@ -17,7 +26,7 @@
 
                 <Button x:Name="btnAddProduto" 
                         Content="Adicionar" 
-                        Margin="422,17,10,17" 
+                        Margin="422,21,0,13" 
                         Width="118" 
                         Height="24" 
                         Command="{Binding AdicionarProdutoFromCommand}" Grid.Column="1" HorizontalAlignment="Right"
@@ -27,29 +36,59 @@
                         Content="Carregar" 
                         Command="{Binding CarregarProdutoCommand}" 
                         Width="118" 
-                        Height="24" Margin="292,17,140,17" Grid.Column="1" HorizontalAlignment="Right"
+                        Height="24" Margin="0,21,134,13" Grid.Column="1" HorizontalAlignment="Right" HorizontalContentAlignment="Center"
                         />
             </Grid>
 
         </GroupBox>
-        
-        <DataGrid SelectedItem="{Binding ProdutoSelecionado, Mode=TwoWay}" AutoGenerateColumns="false" CanUserAddRows="false" IsReadOnly="True" ColumnWidth="*"  IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Produtos}"   Margin="5,63,5,5">
-           
+
+        <DataGrid SelectedItem="{Binding ProdutoSelecionado, Mode=TwoWay}" AutoGenerateColumns="false" CanUserAddRows="false" IsReadOnly="True" ColumnWidth="*"   ItemsSource="{Binding Produtos}" Grid.ColumnSpan="2" VerticalContentAlignment="Stretch" Margin="0,68,0,0">
+
             <DataGrid.ContextMenu>
-            <ContextMenu Name="ContextMenuGrid">
-                    <MenuItem Header="Editar" Command="{Binding EditarProdutoFromCommand}"></MenuItem>
-                    <MenuItem Header="Excluir" Command="{Binding ExcluirProdutoFromCommand}"></MenuItem>
-            </ContextMenu>
+                <ContextMenu x:Name="ContextMenuGrid">
+                    <MenuItem Header="Editar" Command="{Binding EditarProdutoFromCommand}"/>
+                    <MenuItem Header="Excluir" Command="{Binding ExcluirProdutoFromCommand}"/>
+                </ContextMenu>
             </DataGrid.ContextMenu>
-            
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" 
+                Value="{Binding Quantidade, Converter={StaticResource EstoqueBaixoConverter}, ConverterParameter=rowEstoqueBaixo}"/>
+                </Style>
+            </DataGrid.RowStyle>
+
             <DataGrid.Columns>
+
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="30" />
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"  />
-                <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+                <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}" />
                 <DataGridTextColumn Header="Preço" Binding="{Binding Preco, ConverterCulture=pt-BR, StringFormat=C}" />
             </DataGrid.Columns>
-            
+
         </DataGrid>
+        <StackPanel Margin="0,0,0,-38" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <Button Content="SAIR"
+                Foreground="DarkRed" 
+                Behaviors:ButtonBehaviors.ClickCommand="{Binding ClickBtnSairCommand}"
+                FontWeight="Bold" Height="25" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="1,1,1,1" Margin="0,0,12,0" Width="75">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

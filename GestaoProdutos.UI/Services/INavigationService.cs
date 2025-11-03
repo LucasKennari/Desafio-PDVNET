@@ -9,8 +9,8 @@ namespace GestaoProdutos.UI.Services
 {
     public interface INavigationService
     {
-        void AbrirProdutoForm();
-        void AbrirProdutoFormAdd();
-        void AbrirProdutoFormEdit(Produto produto);
+        void AbrirProdutoForm(Action onProdutosQtd, Action onValorTotalEsToque, Action onItensComBaixa);
+        void AbrirProdutoFormAdd(Action onProdutoAdicionado = null);
+        void AbrirProdutoFormEdit(Produto produto, Action onProdutoEditado = null);
     }
 }

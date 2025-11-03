@@ -1,31 +1,24 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using GestaoProdutos.Business.ProdutoService;
 using GestaoProdutos.Data.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using System.Windows.Controls;
 using GestaoProdutos.UI.Command;
+using System.ComponentModel;
 using System.Text.RegularExpressions;
+using System.Windows;
+using System.Windows.Input;
 
 namespace GestaoProdutos.UI.ViewModels
 {
     public class ProdutoFormAddViewModel : INotifyPropertyChanged
     {
         private readonly IProdutoService _produtoService;
+        public Action OnProdutoAdd { get; set; }
         private int _Id;
         public int Id
         {
             get => _Id;
             set { _Id = value; OnPropertyChanged(nameof(Id)); }
         }
-        public string Teste { get => Teste; set => OnPropertyChanged(nameof(Teste)); }
         private string _nome;
         public string Nome
         {
@@ -47,7 +40,6 @@ namespace GestaoProdutos.UI.ViewModels
             set
             {
                 _quant = value;
-               // ((BaseCommand)OnlyNumbersCommand).RaiseCanExecuteChanged();
                 OnPropertyChanged(nameof(Quant));
             }
         }
@@ -62,7 +54,7 @@ namespace GestaoProdutos.UI.ViewModels
         public ICommand AdicionarProdutoCommand { get; }
         public ICommand EditarProdutoCommand { get; }
         public ICommand OkProdutoCommand { get; set; }
-        public ICommand SairProdutoCommand { get; set; }
+        public ICommand ClickBtnSairCommand { get; set; }
         public ICommand OnlyNumbersCommand { get; set; }
         string mensagem = string.Empty;
         public ProdutoFormAddViewModel(IProdutoService produtoService)
@@ -71,13 +63,14 @@ namespace GestaoProdutos.UI.ViewModels
             AdicionarProdutoCommand = new RelayCommand(AdicionarProduto);
             EditarProdutoCommand = new RelayCommand(EditarProduto);
             OkProdutoCommand = new RelayCommand(AdicionarProduto);
-            SairProdutoCommand = new RelayCommand(SairProduto);
+            ClickBtnSairCommand = new RelayCommand(SairProduto);
             OnlyNumbersCommand = new BaseCommand(OnlyNumbersTextChanged, PodeExecutar);
+
         }
 
         private void SairProduto()
         {
-            return;
+            FecharJanela();
         }
         private bool PodeExecutar()
         {
@@ -123,7 +116,8 @@ namespace GestaoProdutos.UI.ViewModels
                 return;
             }
             System.Windows.MessageBox.Show("Produto Editado com sucesso!");
-
+            OnProdutoAdd?.Invoke();
+            FecharJanela();
         }
         public void AdicionarProduto()
         {
@@ -145,6 +139,8 @@ namespace GestaoProdutos.UI.ViewModels
                 return;
             }
             System.Windows.MessageBox.Show("Produto Adicionado com sucesso!");
+            OnProdutoAdd?.Invoke();
+            FecharJanela();
         }
 
 
@@ -181,9 +177,23 @@ namespace GestaoProdutos.UI.ViewModels
 
         public void OnlyNumbersTextChanged()
         {
-           var isNumber = new Regex("[^0-9]+").IsMatch(Quant.ToString());
-            if (!isNumber)
+            var isNumberQuant = new Regex("[^0-9]+").IsMatch(Quant.ToString());
+            if (!isNumberQuant)
                 return;
+            var isNumberPreco = new Regex("[^0-9]+").IsMatch(Quant.ToString());
+            if (!isNumberPreco)
+                return;
+        }
+        public void FecharJanela()
+        {
+            foreach (Window win in Application.Current.Windows)
+            {
+                if (win.DataContext == this)
+                {
+                    win.Close();
+                    break;
+                }
+            }
         }
     }
 }

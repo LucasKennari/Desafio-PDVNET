@@ -3,51 +3,59 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:GestaoProdutos.UI.Views"
+        xmlns:converters="clr-namespace:GestaoProdutos.UI.Converters"
+        xmlns:local="clr-namespace:GestaoProdutos.UI.Views"
         mc:Ignorable="d"
-        Title="Gestão de Produtos" Height="451" Width="800" WindowStartupLocation="CenterScreen" MinWidth="800" MinHeight="451">
+        Title="Gestão de Produtos" Height="451" Width="800" WindowStartupLocation="CenterScreen" MinWidth="800" MinHeight="451" VerticalContentAlignment="Stretch" MaxWidth="800" MaxHeight="451" ResizeMode="NoResize">
+    <Window.Resources>
+        <converters:EstoqueBaixoConverter x:Key="EstoqueBaixoConverter"/>
+    </Window.Resources>
+
     <Grid Margin="0,0,0,7">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <GroupBox Header="Ferramentas&#xD;&#xA;">
-            <Button Content="Abrir Estoque" Height="20" Margin="662,0,8,0" Width="118" Command="{Binding AbrirProdutoFormCommand}" VerticalAlignment="Top" HorizontalAlignment="Right"/>
-        </GroupBox>
-        <GroupBox Header="Dashboard&#xD;&#xA;" VerticalAlignment="Top" Margin="0,63,0,0">
-            <Grid HorizontalAlignment="Right" VerticalAlignment="Center">
-                <GroupBox x:Name="TotProdutos" Height="125" Header="Estoque Total" HorizontalContentAlignment="Right" IsEnabled="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="642,0,0,162" Width="135" HorizontalAlignment="Right" VerticalContentAlignment="Stretch">
+        <GroupBox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170*"/>
+                    <ColumnDefinition Width="27*"/>
+                </Grid.ColumnDefinitions>
+                <GroupBox x:Name="TotProdutos" Height="125" Header="Estoque Total" HorizontalContentAlignment="Right" IsEnabled="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,67,4,229" Width="135" HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
                     <Label HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" TabIndex="0" FontSize="25" FontFamily="Bahnschrift Condensed">
-                        <Label x:Name="lblTotProdutos" Content="{Binding TotalProdutosQtd}" Foreground="{Binding CorEstoque}" HorizontalContentAlignment="Right" FontSize="72" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+                        <Label x:Name="lblTotProdutos" Content="{Binding TotalProdutosQtd}" Foreground="{Binding CorEstoque}" HorizontalContentAlignment="Center" FontSize="50" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Center"/>
                     </Label>
                 </GroupBox>
-                <GroupBox x:Name="VlrTotalEstoque" HorizontalAlignment="Right" Height="125" Header="Valor Total Esotque&#xD;&#xA;"  VerticalAlignment="Bottom" Width="135" HorizontalContentAlignment="Right" IsEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="642,174,0,0" VerticalContentAlignment="Bottom">
+                <GroupBox x:Name="VlrTotalEstoque" HorizontalAlignment="Right" Height="125" Header="Valor Total Esotque&#xD;&#xA;"  VerticalAlignment="Bottom" Width="135" HorizontalContentAlignment="Right" IsEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,0,2,0" VerticalContentAlignment="Bottom" Grid.ColumnSpan="2">
                     <Label HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" TabIndex="0" IsEnabled="False" FontSize="25" FontFamily="Bahnschrift Condensed">
-                        <Label x:Name="lblTotProdutos1" Content="{Binding VlrTotalEstoque}"  Foreground="{Binding CorEstoque}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="24" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+                        <Label x:Name="lblTotProdutos1" Content="{Binding VlrTotalEstoque}"  Foreground="{Binding CorEstoque}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                     </Label>
                 </GroupBox>
-                <GroupBox x:Name="quantItensCat" Header="Quantidade de itens por categoria" Margin="331,18,160,26" HorizontalAlignment="Left" VerticalContentAlignment="Stretch">
-                    <DockPanel LastChildFill="False">
-                        <DataGrid>
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40" />
-                                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
-                                <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
-                                <DataGridTextColumn Header="Categoria" Binding="{Binding Categoria}"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </DockPanel>
-                </GroupBox>
-                <GroupBox x:Name="ProdutosComBaixa" Header="Produtos com baixa" Margin="9,18,482,26" VerticalContentAlignment="Bottom" HorizontalAlignment="Left">
-                    <DockPanel LastChildFill="False" HorizontalAlignment="Left">
-                        <DataGrid  IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="false" CanUserAddRows="false" IsReadOnly="True" ColumnWidth="*"  ItemsSource="{Binding ProdutoBaixa}"  VerticalContentAlignment="Stretch" HorizontalAlignment="Left" >
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40" />
-                                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
-                                <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </DockPanel>
-                </GroupBox>
+                <DockPanel
+            HorizontalAlignment="Left" Margin="10,10,0,8" Width="623" LastChildFill="False">
+                    <GroupBox x:Name="ProdutosComBaixa" Header="Produtos com baixa" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                        <DockPanel LastChildFill="False">
+                            <DataGrid  IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="false" CanUserAddRows="false" IsReadOnly="True" ColumnWidth="*"  ItemsSource="{Binding ProdutoBaixa}"  VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"  >
+                        
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40" />
+                                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                                    <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}" Width="100">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Foreground"
+                            Value="{Binding Quantidade, Converter={StaticResource EstoqueBaixoConverter}, ConverterParameter=cellEstoqueBaixo}"/>
+                                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                                <Setter Property="Padding" Value="5,2"/>
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </GroupBox>
+                </DockPanel>
+                <Button Content="Abrir Estoque" Height="27" Margin="0,25,3,0" Width="118" Command="{Binding AbrirProdutoFormCommand}" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.ColumnSpan="2"/>
             </Grid>
         </GroupBox>
 

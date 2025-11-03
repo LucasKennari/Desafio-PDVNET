@@ -2,17 +2,9 @@
 using GestaoProdutos.Business.ProdutoService;
 using GestaoProdutos.Data.Model;
 using GestaoProdutos.UI.Services;
-using GestaoProdutos.UI.Views;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace GestaoProdutos.UI.ViewModels
@@ -25,6 +17,12 @@ namespace GestaoProdutos.UI.ViewModels
         public ICommand AdicionarProdutoFromCommand { get; }
         public ICommand EditarProdutoFromCommand { get; }
         public ICommand ExcluirProdutoFromCommand { get; }
+        public ICommand ClickBtnSairCommand { get; set; }
+
+        public Action OnProdutosQtd { get; set; }
+        public Action OnValorTotalEstoque { get; set; }
+        public Action OnItensComBaixa { get; set; }
+
         public ObservableCollection<Produto> Produtos { get; set; } = new ObservableCollection<Produto>();
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -43,27 +41,24 @@ namespace GestaoProdutos.UI.ViewModels
             AdicionarProdutoFromCommand = new RelayCommand(AbrirProdutoFormAdd);
             EditarProdutoFromCommand = new RelayCommand(AbrirProdutoFormEdit);
             ExcluirProdutoFromCommand = new RelayCommand(ExluirProdutoFormEdit);
+            ClickBtnSairCommand = new RelayCommand(FecharJanela);
         }
-
 
         private void CarregarProdutos()
         {
             var lista = _produtoService.ObterTodos();
             Produtos.Clear();
-
-            foreach (var produto in lista)
-            {
-                Produtos.Add(produto);
-            }
+            Produtos = new ObservableCollection<Produto>(lista);
+            OnPropertyChanged(nameof(Produtos));
         }
-        private void AbrirProdutoFormAdd() => _navigationService.AbrirProdutoFormAdd();
+        private void AbrirProdutoFormAdd() => _navigationService.AbrirProdutoFormAdd(CarregarProdutos);
         private void AbrirProdutoFormEdit()
         {
             if (_produtoSelecionado?.Id == null)
             {
                 return;
             }
-            _navigationService.AbrirProdutoFormEdit(_produtoSelecionado);
+            _navigationService.AbrirProdutoFormEdit(_produtoSelecionado, CarregarProdutos);
         }
         private void ExluirProdutoFormEdit()
         {
@@ -80,7 +75,20 @@ namespace GestaoProdutos.UI.ViewModels
             System.Windows.MessageBox.Show("Produto excluido com sucesso!");
             CarregarProdutos();
         }
-
+        public void FecharJanela()
+        {
+            foreach (Window win in Application.Current.Windows)
+            {
+                if (win.DataContext == this)
+                {
+                    win.Close();
+                    break;
+                }
+            }
+            OnProdutosQtd?.Invoke();
+            OnItensComBaixa?.Invoke();
+            OnValorTotalEstoque?.Invoke();
+        }
         protected void OnPropertyChanged(string propertyName) =>
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }

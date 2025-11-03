@@ -31,6 +31,5 @@ namespace GestaoProdutos.UI.Views
             _serviceProvider = serviceProvider;
             DataContext = _serviceProvider.GetRequiredService<ViewModels.MainViewModel>();
         }
- 
     }
 }

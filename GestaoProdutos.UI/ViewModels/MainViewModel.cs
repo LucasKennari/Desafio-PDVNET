@@ -44,17 +44,6 @@ namespace GestaoProdutos.UI.ViewModels
                 OnPropertyChanged(CorEstoque(VlrTotalEstoque, 0));
             }
         }
-
-        //public List<Produto> ProdutoBaixa
-        //{
-        //    get => _produtoBaixa; private set
-        //    {
-        //        _produtoBaixa = value;
-        //        OnPropertyChanged(nameof(ProdutoBaixa));
-        //    }
-        //}
-
-
         public string CorEstoque(string? valor, int? quantidade)
         {
             //var tipo = valor > 0 ? valor : quantidade;
@@ -66,8 +55,6 @@ namespace GestaoProdutos.UI.ViewModels
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
-        //Produto NovoProduto = new Produto();
-        //Produto SelectedProduto = new Produto();
         public MainViewModel(IProdutoService produtoService, INavigationService navigationService)
         {
             _navigationService = navigationService;
@@ -78,7 +65,11 @@ namespace GestaoProdutos.UI.ViewModels
             CarregaValorTotalEstoque();
             CarregaItensComBaixa();
         }
-        public void btnAbrirProdutoForm() => _navigationService.AbrirProdutoForm();
+        public void btnAbrirProdutoForm()
+        {
+            _navigationService.AbrirProdutoForm(CarregaProdutosPorQtd, CarregaValorTotalEstoque, CarregaItensComBaixa);
+
+        }
         public bool PodeExecutar() => true;
         public void CarregaProdutosPorQtd() => TotalProdutosQtd = _produtoService.TotalProdutosPorQtd();
         public void CarregaValorTotalEstoque()
@@ -86,7 +77,6 @@ namespace GestaoProdutos.UI.ViewModels
             decimal valorTotal = 0;
             var vlrProduto = _produtoService.ValorTotalEstoque();
             VlrTotalEstoque = vlrProduto.ToString("C", new CultureInfo("pt-BR")); ;
-            //testar com o retorno 0
         }
 
         public void CarregaItensComBaixa()
@@ -94,12 +84,9 @@ namespace GestaoProdutos.UI.ViewModels
             List<Produto> produtos = _produtoService.ObterTodos().Where(p => p.Quantidade <= 5)
                 .OrderBy(p => p.Quantidade)
                 .ToList();
-            
 
-            foreach (var produto in produtos)
-            {
-                ProdutoBaixa.Add(produto);
-            }
+            ProdutoBaixa = new ObservableCollection<Produto>(produtos);
+            OnPropertyChanged(nameof(ProdutoBaixa));
         }
         protected void OnPropertyChanged(string propertyName) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

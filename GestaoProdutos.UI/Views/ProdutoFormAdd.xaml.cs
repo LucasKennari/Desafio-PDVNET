@@ -48,5 +48,6 @@ namespace GestaoProdutos.UI.Views
                 txt.TextChanged += txtPreco_TextChanged;
             }
         }
+
     }
 }

@@ -17,27 +17,33 @@ namespace GestaoProdutos.UI.Services
         {
             _serviceProvider = serviceProvider;
         }
-        public void AbrirProdutoForm()
+        public void AbrirProdutoForm(Action onProdutosQtd, Action onValorTotalEstoque, Action onItensComBaixa)
         {
             var produtoFormView = _serviceProvider.GetRequiredService<Views.ProdutoFormView>();
+            if (produtoFormView.DataContext is ProdutoFormViewModel vm)
+            {
+                vm.OnProdutosQtd = onProdutosQtd;
+                vm.OnItensComBaixa = onItensComBaixa;
+                vm.OnValorTotalEstoque = onValorTotalEstoque;
+            }
             produtoFormView.ShowDialog();
         }
 
-        public void AbrirProdutoFormAdd()
+        public void AbrirProdutoFormAdd(Action onProdutoAdicionado = null)
         {
             var produtoFormAddView = _serviceProvider.GetRequiredService<ProdutoFormAdd>();
-            produtoFormAddView.ShowDialog();
-            if (produtoFormAddView.DialogResult == true)
+            if (produtoFormAddView.DataContext is ProdutoFormAddViewModel vm)
             {
-
+                vm.OnProdutoAdd = onProdutoAdicionado;
             }
+            produtoFormAddView.ShowDialog();
         }
-        public void AbrirProdutoFormEdit(Produto produto)
+        public void AbrirProdutoFormEdit(Produto produto, Action onProdutoEditado = null)
         {
             var vm = _serviceProvider.GetRequiredService<ProdutoFormAddViewModel>();
             vm.SetProduto(produto);
-
             var produtoFormAddView = _serviceProvider.GetRequiredService<ProdutoFormAdd>();
+            vm.OnProdutoAdd = onProdutoEditado;
             produtoFormAddView.DataContext = vm;
             produtoFormAddView.ShowDialog();
         }
