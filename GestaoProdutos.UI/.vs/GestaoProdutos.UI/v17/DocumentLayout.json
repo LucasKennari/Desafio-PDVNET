@@ -81,8 +81,7 @@
               "RelativeToolTip": "..\\GestaoProdutos.Business\\Responses\\Response.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T15:18:01.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T15:18:01.17Z"
             },
             {
               "$type": "Document",
@@ -94,8 +93,7 @@
               "RelativeToolTip": "..\\GestaoProdutos.Business\\Responses\\iHandlerResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T15:17:59.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T15:17:59.445Z"
             },
             {
               "$type": "Document",
@@ -107,8 +105,7 @@
               "RelativeToolTip": "..\\GestaoProdutos.Business\\Responses\\IResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T15:17:57.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T15:17:57.608Z"
             },
             {
               "$type": "Document",
@@ -120,8 +117,7 @@
               "RelativeToolTip": "..\\GestaoProdutos.Data\\ProdutoContext.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T15:14:29.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T15:14:29.023Z"
             },
             {
               "$type": "Document",
@@ -133,8 +129,7 @@
               "RelativeToolTip": "..\\GestaoProdutos.Data\\ProdutoContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T15:14:26.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T15:14:26.551Z"
             },
             {
               "$type": "Document",
@@ -146,8 +141,7 @@
               "RelativeToolTip": "Command\\BaseCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T15:08:38.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T15:08:38.7Z"
             },
             {
               "$type": "Document",
@@ -159,8 +153,7 @@
               "RelativeToolTip": "Services\\NavigationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T15:06:54.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T15:06:54.477Z"
             },
             {
               "$type": "Document",
@@ -185,8 +178,7 @@
               "RelativeToolTip": "Converters\\EstoqueBaixoConverter.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T14:10:25.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T14:10:25.749Z"
             },
             {
               "$type": "Document",
@@ -197,8 +189,7 @@
               "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Views\\ProdutoFormAdd.xaml",
               "RelativeToolTip": "Views\\ProdutoFormAdd.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-03T13:51:38.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T13:51:38.994Z"
             },
             {
               "$type": "Document",
@@ -210,8 +201,7 @@
               "RelativeToolTip": "Views\\ProdutoForm.xaml.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T14:53:22.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T14:53:22.44Z"
             },
             {
               "$type": "Document",
@@ -246,8 +236,7 @@
               "ToolTip": "C:\\Users\\lucas\\Desktop\\PDVNET\\GestaoProdutos.UI\\Views\\ProdutoForm.xaml",
               "RelativeToolTip": "Views\\ProdutoForm.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-03T12:50:54.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T12:50:54.025Z"
             }
           ]
         },
