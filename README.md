@@ -19,6 +19,7 @@
 >  1. Crie um fork!
 >  2. Utilize o comando para clonar no seu PC: `git clone LINK_SSH/HTTPS`
 >  4. No [.NET-INSTALL](./.NET-INSTALAÇÃO) - Você encontra como instalar o .NET 8 Na sua máquina
+> 
 >  <img src="https://i.imgur.com/RgYeWeg.jpeg" height="25" margin="0" align="center"/> **Após ter baixado na sua máquina**
 >  1. Na solution GestaoProdutos.Data, abra o Console.
 >  2. Execute o comando  `dotnet ef migrations add inicial` (Para criar as migrations com seeds)
