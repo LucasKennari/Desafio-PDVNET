@@ -1,0 +1,22 @@
+Para instalar o .NET 8 usando a CLI do .NET, você pode seguir os passos abaixo:
+
+## Instalação
+1. *Verifique se o .NET SDK está instalado*: Execute o comando `dotnet --version` no terminal para verificar se o .NET SDK já está instalado.
+2. *Instale o .NET 8 SDK*: Se o .NET SDK não estiver instalado ou se você precisar de uma versão específica, você pode instalar o .NET 8 SDK executando o seguinte comando:
+
+### No Windows
+Você pode usar o PowerShell ou o cmd para instalar o .NET 8 SDK. Aqui está o comando para baixar e instalar o instalador:
+winget install Microsoft.DotNet.SDK.8
+
+### No Linux (Ubuntu/Debian)
+sudo apt-get update; \
+  sudo apt-get install -y dotnet-sdk-8.0
+
+### No macOS (com Homebrew)
+brew install --cask dotnet-sdk@8
+
+## Verificação
+Depois da instalação, verifique se o .NET 8 SDK foi instalado corretamente executando:
+dotnet --list-sdks
+
+Isso deve listar as versões do .NET SDK instaladas no seu sistema, incluindo a versão 8.
